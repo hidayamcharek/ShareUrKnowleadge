@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ShareKnowledge"
+    }
+  },
+  "defaultProject": "ShareKnowledge",
+  "cli": {
+    "analytics": false
+  }
 }
