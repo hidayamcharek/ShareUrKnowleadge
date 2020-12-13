@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 // importing firebase module
 import { AngularFireModule } from '@angular/fire';
@@ -30,6 +31,7 @@ import { ReadBlogComponent } from './blog/read-blog/read-blog.component';
     ReadBlogComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),

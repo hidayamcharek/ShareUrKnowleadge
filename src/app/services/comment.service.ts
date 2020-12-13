@@ -1,31 +1,30 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Blog} from '../models/blog';
+import {Comment} from '../models/comment';
 
 @Injectable({
   providedIn: 'root'
 })
-export class BlogService {
-  url = 'http://localhost:5000/api/v1/blogs/';
-
+export class CommentService {
+  url = 'http://localhost:5000/api/v1/comment/';
   constructor(private http: HttpClient) { }
-  getBlog() {
-    console.log(this.http.get<Blog[]>(this.url));
-    return this.http.get<Blog[]>(this.url);
+  getComment() {
+    console.log(this.http.get<Comment[]>(this.url));
+    return this.http.get<Comment[]>(this.url);
   }
-  deleteBlog(id) {
+  deleteComment(id) {
     return this.http.delete(this.url + id);
   }
 
-  addBlog(b: Blog) {
+  addComment(b: Comment) {
     return this.http.post(this.url, b);
   }
 
-  searchBlog(id) {
+  searchComment(id) {
     return this.http.get(this.url + id);
   }
 
-  putBlog(b: Blog) {
+  putComment(b: Comment) {
     return this.http.put(this.url, b);
   }
 }

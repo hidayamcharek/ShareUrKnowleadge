@@ -1,7 +1,7 @@
-export class Blog{
-  id: string;
+export class Blog {
+  id: number;
   title: string;
   description: string;
   etat: string;
-  dateb: string;
+  dateb: Date;
 }

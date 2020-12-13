@@ -13,10 +13,10 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'profil', component: ProfilComponent},
-  { path: 'blog', component: ReadBlogComponent},
   { path: 'editblog', component: UpdateBlogComponent},
   { path: 'deleteblog', component: DeleteBlogComponent},
-  { path: 'createblog', component: CreateBlogComponent}
+  { path: 'createblog', component: CreateBlogComponent},
+  { path: 'readblog', component: ReadBlogComponent}
 
 ];
 
