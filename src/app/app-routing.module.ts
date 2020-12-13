@@ -7,17 +7,19 @@ import {ReadBlogComponent} from './blog/read-blog/read-blog.component';
 import {UpdateBlogComponent} from './blog/update-blog/update-blog.component';
 import {DeleteBlogComponent} from './blog/delete-blog/delete-blog.component';
 import {CreateBlogComponent} from './blog/create-blog/create-blog.component';
+import {SingleBlogComponent} from './blog/single-blog/single-blog.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full'},
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'profil', component: ProfilComponent},
-  { path: 'editblog', component: UpdateBlogComponent},
+  { path: 'editblog/:id', component: UpdateBlogComponent},
   { path: 'deleteblog', component: DeleteBlogComponent},
   { path: 'createblog', component: CreateBlogComponent},
-  { path: 'readblog', component: ReadBlogComponent}
-
+  { path: 'readblog', component: ReadBlogComponent},
+  { path: 'singleblog/:id', component: SingleBlogComponent},
+  { path: '**', component: ReadBlogComponent}
 ];
 
 @NgModule({

@@ -25,7 +25,7 @@ export class BlogService {
     return this.http.get(this.url + id);
   }
 
-  putBlog(b: Blog) {
-    return this.http.put(this.url, b);
+  putBlog(b: Blog, id) {
+    return this.http.put(this.url + id, b );
   }
 }

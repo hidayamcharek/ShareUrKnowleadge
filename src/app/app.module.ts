@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 
 // importing firebase module
@@ -18,6 +18,7 @@ import { CreateBlogComponent } from './blog/create-blog/create-blog.component';
 import { UpdateBlogComponent } from './blog/update-blog/update-blog.component';
 import { DeleteBlogComponent } from './blog/delete-blog/delete-blog.component';
 import { ReadBlogComponent } from './blog/read-blog/read-blog.component';
+import { SingleBlogComponent } from './blog/single-blog/single-blog.component';
 
 @NgModule({
   declarations: [
@@ -28,9 +29,11 @@ import { ReadBlogComponent } from './blog/read-blog/read-blog.component';
     CreateBlogComponent,
     UpdateBlogComponent,
     DeleteBlogComponent,
-    ReadBlogComponent
+    ReadBlogComponent,
+    SingleBlogComponent
   ],
   imports: [
+    ReactiveFormsModule,
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,

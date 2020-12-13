@@ -6,7 +6,7 @@ import {Comment} from '../models/comment';
   providedIn: 'root'
 })
 export class CommentService {
-  url = 'http://localhost:5000/api/v1/comment/';
+  url = 'http://localhost:5000/api/v1/comments/';
   constructor(private http: HttpClient) { }
   getComment() {
     console.log(this.http.get<Comment[]>(this.url));

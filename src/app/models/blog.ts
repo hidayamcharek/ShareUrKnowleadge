@@ -1,7 +1,7 @@
 export class Blog {
   id: number;
-  title: string;
-  description: string;
+  titre: any;
+  description: any;
   etat: string;
   dateb: Date;
 }
